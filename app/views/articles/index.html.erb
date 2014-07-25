@@ -1,18 +1,21 @@
 <div id="container">
-  <h2 class="sea-blue">Listing articles</h2>
+  <h2 class="sea-blue">Articles</h2>
   <div class="wrap">
     <table>
       <tr>
         <th>Title</th>
         <th>Description</th>
         <th>Date</th>
+        <th>Options</th>
       </tr>
 
       <% @articles.each do |article| %>
+
         <tr>
           <td><%= article.title %></td>
           <td><%= article.text %></td>
-          <td><%=article.created_at%></td>
+          <td><%=article.created_at.to_formatted_s(:long)%></td>
+          <td><%=link_to 'edit', edit_article_path(article)%><%=link_to 'delete',edit_article_path(article)%></td>
         </tr>
       <% end %>
     </table>

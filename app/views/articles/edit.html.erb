@@ -1,7 +1,8 @@
+<div id ="container"> 
 <h1>Editing article</h1>
  
-<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
-  <% if @article.errors.any? %>
+<%= form_for :article, url: article_path(params[:id]), method: :patch do |f| %>
+  <% if @article %>
   <div id="error_explanation">
     <h2><%= pluralize(@article.errors.count, "error") %> prohibited
       this article from being saved:</h2>
@@ -12,10 +13,9 @@
     </ul>
   </div>
   <% end %>
-  <p>
-    <%= f.label :title %><br>
+  <h1><%= f.label :title %></h1>
+    
     <%= f.text_field :title %>
-  </p>
  
   <p>
     <%= f.label :text %><br>
@@ -28,3 +28,4 @@
 <% end %>
  
 <%= link_to 'Back', articles_path %>
+</div>
