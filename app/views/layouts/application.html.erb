@@ -5,10 +5,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GhostRyte</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC' rel='stylesheet' type='text/css'>
+     
 </head>
+
 <body>
+	<nav id="main">
+		<span id="main-label" class="mobile-hide subtle">Jordan Littell</span>
+
+		<ul class ="mobile-hide" id="main-menu">
+			<li class="main-item"><%=link_to 'home', controller: "welcome"%></a></li>
+		    <li class="main-item"><%=link_to 'articles', articles_path%></li>
+		</ul>
+		<span id="mobile-menu-img">Menu</span>
+		<ul id="mobile-menu">
+		    
+		    <li class="main-item">Portfolio</li>
+		    <li class="main-item">Articles</li>
+		</ul>
+	</nav>
 
 <%= yield %>
 
 </body>
 </html>
+

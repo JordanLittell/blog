@@ -1,18 +1,19 @@
-<h1>Listing articles</h1>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @articles.each do |article| %>
+<div id="container">
+  <h1>Listing articles</h1>
+   
+  <table>
     <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= article.created_at%> <%=link_to 'edit', edit_article_path(article)%></td>
+      <th>Title</th>
+      <th>Text</th>
     </tr>
-  <% end %>
-</table>
-<%=link_to "back", new_article_path%>
-
+   
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.text %></td>
+        <td><%= article.created_at%> <%=link_to 'edit', edit_article_path(article)%></td>
+      </tr>
+    <% end %>
+  </table>
+  <%=link_to "back", new_article_path%>
+</div>
