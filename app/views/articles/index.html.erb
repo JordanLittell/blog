@@ -10,8 +10,9 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
-      <td><%= article.created_at%></td>
+      <td><%= article.created_at%> <%=link_to 'edit', edit_article_path(article)%></td>
     </tr>
   <% end %>
 </table>
 <%=link_to "back", new_article_path%>
+
