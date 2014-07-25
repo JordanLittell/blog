@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 	end
 	def update
 		@article = Article.find(params[:id])
-		if @article.update
+		if @article.update(article_params)
 			redirect_to "index"
 		else 
 			render "edit"

@@ -516,6 +516,12 @@ tr{
     background-color: #EFEFEF;
     padding: .8em;
     text-align: center;
+    -webkit-transition: background-color 2s slow;
+
+}
+tr:nth-child(1n+2):hover{
+    background-color: #DFDFDF;
+    cursor: pointer;
 }
 
 

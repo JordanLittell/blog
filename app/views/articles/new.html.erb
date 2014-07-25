@@ -1,8 +1,8 @@
 <div id="container">
 
 
-<h1>New Article</h1><br><br>
-<%= form_for :article do |f| %>
+<h1 class="gold">New Article</h1><br><br>
+<%= form_for :article, url: articles_path do |f| %>
   <% if @article %>
   <div id="error_explanation">
     <h2><%= pluralize(@article.errors.count, "error") %> prohibited
@@ -15,12 +15,12 @@
   </div>
   <% end %>
  
-    <h2><%= f.label :title %><br></h2>
-    <h2><%= f.text_field :title %></h2>
+    <h3><%= f.label :title %><br></h3>
+    <h3><%= f.text_field :title %></h3>
   
  
   
-    <h2><%= f.label :text %></h2>
+    <h3><%= f.label :text %></h3>
     <%= f.text_area :text %>
   </p>
  
@@ -28,6 +28,6 @@
     <%= f.submit %>
   </p>
 <% end %>
-<%=link_to "Back", articles_path%>
+<%=link_to "Show Articles", articles_path%>
 
 </div>
