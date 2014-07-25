@@ -1,6 +1,8 @@
 
   <h2 class="sea-blue">Articles</h2>
+  <%=link_to "Create Article", new_article_path%>
   <div class="wrap">
+
     <table>
       <tr>
         <th>Title</th>
@@ -13,14 +15,14 @@
 
         <tr>
           <td><%= article.title %></td>
-          <td><%= article.text %></td>
+          <td><%= article.description %></td>
           <td><%=article.created_at.to_formatted_s(:long)%></td>
-          <td><%=link_to 'edit', edit_article_path(article)%><%=link_to 'delete',article_path(article), method: :delete, data: {confirm: "are you sure?"}%></td>
+          <td><%=link_to 'edit', edit_article_path(article)%><%=link_to 'delete',article_path(article), method: :delete%></td>
         </tr>
       <% end %>
     </table>
   </div>
-  <%=link_to "New Article", new_article_path%>
+  
   <br><br>
-  <%=debug @articles%>
+
 

@@ -9,9 +9,10 @@ class ArticlesController < ApplicationController
 		end
 	end
 	def destroy
-		@article = Article.find(params[:id])
+		@article = Article.find_by_id(params[:id])
 		@article.destroy
-		redirect_to 'new'
+		redirect_to articles_path
+		# redirect_to @article
 	end
 	def new 
 		@article = Article.new()
@@ -30,7 +31,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.update(article_params)
 		if @article.update(article_params)
-			redirect_to "index"
+			redirect_to @article
 		else 
 			render "edit"
 		end
@@ -39,6 +40,6 @@ class ArticlesController < ApplicationController
 	private 
 
 	def article_params
-		params.require(:article).permit(:title,:text)
+		params.require(:article).permit(:title,:text,:description)
 	end
 end

@@ -494,7 +494,7 @@ input::-moz-focus-inner {
 textarea {
     overflow: auto; /* 1 */
     vertical-align: top; /* 2 */
-    width: 80%;
+    width: 40%;
     height: 300px;
 }
 
@@ -608,17 +608,21 @@ textarea {
 a{
     margin: 1.2em 5%;
     color: #7AC5AD;
+    padding:4px;
     text-decoration: none;
     display: inline-block;
     letter-spacing: 1.8px;
     font-weight: 100;
     float: left;
+
     text-align: center; 
     cursor: pointer;  
     transition: color .6s ease-in-out;
 }
 a:hover{
     color: #F0FFFF;
+    background-color: #3C3C3C;
+    border-radius: 3px;
 
 }
 
