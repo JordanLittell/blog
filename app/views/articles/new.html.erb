@@ -1,33 +1,6 @@
-<div id="container">
+
 
 
 <h1 class="gold">New Article</h1><br><br>
-<%= form_for :article, url: articles_path do |f| %>
-  <% if @article %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@article.errors.count, "error") %> prohibited
-      this article from being saved:</h2>
-    <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-  <% end %>
- 
-    <h3><%= f.label :title %><br></h3>
-    <h3><%= f.text_field :title %></h3>
-  
- 
-  
-    <h3><%= f.label :text %></h3>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form'%>
 <%=link_to "Show Articles", articles_path%>
-
-</div>

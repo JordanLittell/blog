@@ -10,10 +10,9 @@
     </ul>
   </div>
   <% end %>
-  <p>
-    <%= f.label :title %><br>
+  <h1><%= f.label :title %></h1>
+    
     <%= f.text_field :title %>
-  </p>
  
   <p>
     <%= f.label :text %><br>
@@ -24,5 +23,3 @@
     <%= f.submit %>
   </p>
 <% end %>
- 
-<%= link_to 'Back', articles_path %>

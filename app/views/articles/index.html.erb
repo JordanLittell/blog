@@ -1,4 +1,4 @@
-<div id="container">
+
   <h2 class="sea-blue">Articles</h2>
   <div class="wrap">
     <table>
@@ -15,10 +15,12 @@
           <td><%= article.title %></td>
           <td><%= article.text %></td>
           <td><%=article.created_at.to_formatted_s(:long)%></td>
-          <td><%=link_to 'edit', edit_article_path(article)%><%=link_to 'delete',edit_article_path(article)%></td>
+          <td><%=link_to 'edit', edit_article_path(article)%><%=link_to 'delete',article_path(article), method: :delete, data: {confirm: "are you sure?"}%></td>
         </tr>
       <% end %>
     </table>
   </div>
   <%=link_to "New Article", new_article_path%>
-</div>
+  <br><br>
+  <%=debug @articles%>
+
