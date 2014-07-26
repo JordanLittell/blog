@@ -1,8 +1,10 @@
 <h1><%=@article.title%></h1>
 <br>
 <div class="wrapper">
-	<p><b>Text: </b><%=@article.text%></p>
-	<p><b>Description:</b><%=@article.description%></p>
+	
+	<h3><i><%=@article.description%></i></h3><br>
+	<p>Text:<%=@article.text%></p><br>
 	<%=link_to 'edit', edit_article_path(@article)  %>
 	<%=link_to 'okay', articles_path%>
+
 </div>

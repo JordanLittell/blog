@@ -521,7 +521,7 @@ tr{
 }
 tr:nth-child(1n+2):hover{
     background-color: #DFDFDF;
-    cursor: pointer;
+
 }
 
 

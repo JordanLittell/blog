@@ -7,6 +7,9 @@ gem 'rails', '4.1.1'
 group :development do 
 	gem 'sqlite3'
 end
+group :development, :test do
+  gem 'rspec-rails'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,6 +23,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'devise'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'rspec', "~> 2.14.1"
@@ -32,6 +36,7 @@ gem 'spring',        group: :development
 group :production do 
 	gem 'pg'
 	gem 'rails_12factor'
+
 end
 
 # Use ActiveModel has_secure_password
