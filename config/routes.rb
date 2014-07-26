@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  get 'admins/new'
+
   resources :articles
+  resources :admins
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

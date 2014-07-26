@@ -1,0 +1,19 @@
+<h1>Sign Up</h1>
+<%=form_for @admin do |f|%> 
+	<% if @admin.errors.any?%>
+		<h3>We found the following errors:</h3>
+		<ul>
+		<% @admin.errors.full_messages.each do |msg| %>
+			<li><%=msg%></li>
+		<%end%>
+
+		</ul>
+	<%end%>
+	<p><%=f.label :username%>
+		<%=f.text_field :username%></p>
+	<p><%=f.label :password%>
+		<%=f.password_field :password%></p>
+	<p><%=f.label :password_confirmation%>
+	<%=f.password_field :password_confirmation%></p>
+	<p class="submit"><%=f.submit%></p>
+<%end%>
