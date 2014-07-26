@@ -7,7 +7,16 @@ class Admin < ActiveRecord::Base
 	validates_presence_of :username
 	validates_uniqueness_of :username
 
-	def encrypt_password
+
+	def self.authenticate(password, username)
+		admin = admin.find_by_username(username)
+		if admin && admin.password_hash == BCrypt::Engine.hash_secret(password,admin.password_salt)
+			admin
+		else 
+			nil
+		end
+	end
+	def self.encrypt_password
 		if password.present? 
 			self.password_salt = BCrypt::Engine.generate_salt
 			self.password_hash = BCrypt::Engine.hash_secret(password,password_salt)
