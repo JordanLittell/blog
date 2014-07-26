@@ -4,17 +4,11 @@ class AdminsController < ApplicationController
 		render 'new'
 	end
 	def create
-		@admin = Admin.new(admin_params)
+		@admin = Admin.new(params[:admin])
 		if @admin.save
 			redirect_to root_url, :notice => "Welcome"
 		else 
 			render 'new'
 		end
-	end
-
-	private 
-
-	def admin_params
-		params.require(:admin).permit(:username,:password,:password_confirmation)
 	end
 end
