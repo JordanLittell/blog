@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'admins/new'
-
+  get "log_in" => "sessions#new", :as =>'log_in'
+  get "log_out" => "sessions#destroy", :as => 'log_out'
   resources :articles
   resources :admins
+  resources :sessions
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

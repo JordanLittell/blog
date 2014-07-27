@@ -8,8 +8,8 @@ class Admin < ActiveRecord::Base
 	validates_uniqueness_of :username
 
 
-	def self.authenticate(password, username)
-		admin = admin.find_by_username(username)
+	def self.authenticate(username,password)
+		admin = find_by_username(username)
 		if admin && admin.password_hash == BCrypt::Engine.hash_secret(password,admin.password_salt)
 			admin
 		else 
