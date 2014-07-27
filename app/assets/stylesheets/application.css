@@ -791,8 +791,7 @@ h6{
     color: #FFC125;
 }
 .subtle{
-    color: #C4C4C4;
-    
+    color: #C4C4C4;  
 }
 .subtle li{
     -webkit-transition: color .8s ease-in-out;
@@ -1037,7 +1036,19 @@ nav{
    Helper classes
    ========================================================================== */
 
-
+.notice{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1874CD;
+    padding:10px;
+}
+.notice:first-child{
+    color: white;
+}
+.white{
+    color: #FFF;
+}
 
 /*
  * Image replacement
