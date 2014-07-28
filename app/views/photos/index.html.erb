@@ -6,6 +6,14 @@
 	<%@photos.each do |photo| %>
 		<%url = photo.file_data.url%>
 
-		<img src = <%="#{url}"%>/>
+		<div class="gallery-image">
+			<img src = <%="#{url}"%> class="gallery-image"/>
+			<ul>
+				<% if current_admin %>
+			<%= link_to "delete",photo_path(photo), :method=>:delete%>
+			<%=link_to "edit", edit_photo_path(photo), :method => "get"%>
+			<%end%>
+			</ul>
+		</div>
 	<%end%>
 </div>

@@ -308,8 +308,6 @@ nav ol {
 img {
     border: 0; /* 1 */
     -ms-interpolation-mode: bicubic; /* 2 */
-    max-width: 300px;
-    width: 100%;
 }
 
 /**
@@ -827,11 +825,15 @@ h6{
     -moz-justify-content:space-between;
     -o-justify-content:space-between;
 }
-.photo-gallery img{
-    height: 200px;
-    padding: 2px;
-    margin: 1%;
+
+.gallery-image img{
+    max-height: 200px;
+    max-width: 250px;
+    width: 100%;
+    padding: 5px;
+    background-color: #404040;
 }
+
 
 
 /* ==========================================================================
