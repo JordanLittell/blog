@@ -2,8 +2,10 @@
 	<%=link_to 'create new', photos_new_path %>
 <%end%>
 <br><br><Br>
-<%=@photos.each do |photo| %>
-	<%url = photo.file_data.url%>
+<div class="photo-gallery">
+	<%@photos.each do |photo| %>
+		<%url = photo.file_data.url%>
 
-	<img src = <%="#{url}"%>/>
-<%end%>
+		<img src = <%="#{url}"%>/>
+	<%end%>
+</div>

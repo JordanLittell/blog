@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
 		@photo =Photo.new(photo_params)
 		@photo.file_data = params[:file]
 		if @photo.save!
-			redirect_to photos_path, :notice => 'success'
+			redirect_to photos_path, :notice => 'image upload successful'
 		else 
 			render 'new'
 		end
