@@ -1,3 +1,5 @@
+<h1>Photos</h1>
+
 <% if current_admin%>
 	<%=link_to 'create new', photos_new_path %>
 <%end%>
@@ -7,6 +9,8 @@
 		<%url = photo.file_data.url%>
 
 		<div class="gallery-image">
+			<hr>
+			<h4><%=photo.title%></h4>
 			<img src = <%="#{url}"%> class="gallery-image"/>
 			<ul>
 				<% if current_admin %>
@@ -15,5 +19,6 @@
 			<%end%>
 			</ul>
 		</div>
+		<hr>
 	<%end%>
 </div>

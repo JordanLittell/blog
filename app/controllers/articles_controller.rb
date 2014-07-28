@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-
+	before_action :admin?,only:[:new,:destroy,:update,:edit,:create]
 	def create
 		@article = Article.new(article_params)
 		if @article.save
