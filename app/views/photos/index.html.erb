@@ -7,8 +7,6 @@ have template for library
 
 <%@photos.each do |photo|%>
 <%=photo.title%>
-<br>
-<%=photo.binary_data.present?%>
-<%=photo.created_at%>
+<%=photo.file_data%>
 
 <%end%>

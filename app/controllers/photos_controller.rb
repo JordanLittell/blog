@@ -1,9 +1,12 @@
 class PhotosController < ApplicationController
+  require 'carrierwave/orm/activerecord'
   def create
   	@photo = Photo.new(photo_params)
-    if @photo.save
-      redirect_to root_url, :notice => "Photo added"
-    else
+    @photo.file_data = params[:file]
+
+    if @photo.save!
+      redirect_to 'index', :notice=>"success"
+    else 
       render 'new'
     end
   end
@@ -19,9 +22,6 @@ class PhotosController < ApplicationController
     @photo = Photo.new()
   end
 
-  def update
-  
-  end
   private 
 
   def photo_params
