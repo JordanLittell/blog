@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-	def new 
-
-	end
 	def create
 		admin = Admin.authenticate(params[:username],params[:password])
 		if admin

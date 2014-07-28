@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
-  get 'admins/new'
-  get "log_in" => "sessions#new", :as =>'log_in'
-  get "log_out" => "sessions#destroy", :as => 'log_out'
   resources :articles
   resources :admins
   resources :sessions
+  resources :photos
+  get 'photos/create'
+
+  get 'photos/destroy'
+
+  get 'photos/new'
+
+  get 'photos/update'
+
+  get 'admins/new'
+  get "log_in" => "sessions#new", :as =>'log_in'
+  get "log_out" => "sessions#destroy", :as => 'log_out'
+  
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

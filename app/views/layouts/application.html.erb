@@ -14,7 +14,6 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC' rel='stylesheet' type='text/css'>
-     
 </head>
 
 <body>
@@ -25,8 +24,9 @@
 			<li class="main-item"><%=link_to 'Home', controller: "welcome"%></a></li>
 		    <li class="main-item"><%=link_to 'Articles', articles_path%></li>
 		    <% if !current_admin %>
-		    <li class="main-item"><%=link_to 'Sign Up', new_admin_path%></li>
+		
 		    <li class="main-item"><%=link_to 'Login', log_in_path%></li>
+		    <li class="main-item"><%=link_to 'Photos', photos_path%></li>
 		    <%end%>
 		    <% if current_admin %>
 		    	<li class="main-item"><%=link_to 'Logout', log_out_path%></li>

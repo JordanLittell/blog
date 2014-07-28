@@ -1,0 +1,12 @@
+<h1 class="gold">Photos</h1>
+<%= link_to "create",new_photo_path %>
+loop through fotos
+Grab src attribute from databse and include it in a img tag
+Incorporate descriptions and titles with pictures 
+have template for library 
+
+<%@photos.each do |photo|%>
+<%=photo.title%>
+<br>
+<%=photo.created_at%>
+<%end%>
