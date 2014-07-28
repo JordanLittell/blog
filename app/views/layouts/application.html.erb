@@ -26,7 +26,7 @@
 		    <% if !current_admin %>
 		
 		    <li class="main-item"><%=link_to 'Login', log_in_path%></li>
-		    <li class="main-item"><%=link_to 'Photos', photos_path%></li>
+		    <li class="main-item"><%=link_to 'Photos', photos_new_path%></li>
 		    <%end%>
 		    <% if current_admin %>
 		    	<li class="main-item"><%=link_to 'Logout', log_out_path%></li>

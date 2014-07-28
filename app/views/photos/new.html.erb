@@ -1,15 +1,10 @@
-<h1>New Photo!</h1>
 
 
-<%=form_for  @photo, :url => {:action => 'create'},:html => {:multi_part => 'true'} do |f|%>
-
-<!-- User should be able to drag foto or select file to display it -->
-
-<h3><%=f.label :title%></h3>
+<%=form_for @photo, :html => {:multipart => "true"} do |f|%>
+<%=f.label :title%><br>
 <%=f.text_field :title%>
+
 <br>
-<h3>Photo File</h3><br>
-<%=f.file_field :file_data%>
-<br><br>
+<%=f.file_field :file_data%> <br>
 <%=f.submit :okay%>
 <%end%>
