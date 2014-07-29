@@ -16,7 +16,6 @@
       </tr>
 
       <% @articles.each do |article| %>
-
         <tr>
           <td><%= link_to "#{article.title}", article_path(article) %></td>
           <td><%= article.description %></td>
@@ -27,6 +26,11 @@
         </tr>
       <% end %>
     </table>
+    <div class="sidebar">
+      Side Bar 
+      include navigation that allows users to search by date or by topic 
+
+    </div>
   </div>
   
   <br><br>
