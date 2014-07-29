@@ -38,6 +38,11 @@ class ArticlesController < ApplicationController
 	end
 
 	private 
+	def admin? 
+		if !current_admin 
+			redirect_to root_path, :notice => "you are not the admin"
+		end
+	end
 
 	def article_params
 		params.require(:article).permit(:title,:text,:description)

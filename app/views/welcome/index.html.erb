@@ -8,15 +8,16 @@
 		<div class="wrap">          
 		    <div class="col"><h5 class="gold">Recent Books</h5><hr>
 		        <ul class="subtle">
-		            <li>JQuery: Novice to Ninja</li>
+		        	
 		            <li>HTML5 Canvas</li>
 		            <li>Passionate Programmer</li>
 		        </ul>
 		    </div>
 		    <div class="col"><h5 class="gold">Recent Posts</h5><hr>
 		        <ul class="subtle">
-		            <li>App Academy</li>
-		            <li>Freelancing</li>
+		        	<%@articles.each do |article|%>
+		            <li><%=article.title%></li>
+		            <%end%>
 		        </ul>
 		    </div>
 		    <div class="col">
