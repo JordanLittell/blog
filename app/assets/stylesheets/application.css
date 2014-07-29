@@ -660,10 +660,10 @@ input[type="submit"]:hover{
    typographic scale: 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72;
    ========================================================================== */
 #container{
-    width: 90%;
+    width: 95%;
     margin:0 auto;
     background-color: #FFF;
-    padding: 4.5em 2em 4em 2em;
+    padding: 4.5em 0 4em 0;
     border-radius: 3px;
 }
 
@@ -675,22 +675,25 @@ input[type="submit"]:hover{
     margin: 1.5em auto;
     line-height: 1.5em;
     width: 100%;
-    padding: 1em;
     border-radius: 3px;
     display: -ms-flex;
     display: -webkit-flex;
     display:flex;
     flexbox-wrap:wrap;
     justify-content:space-between;
-    -webkit-justify-content:space-between;
+    -webkit-justify-content:flex-start;
     -webkit-flexbox-wrap:wrap;
-    -ms-justify-content:space-between;
+    -ms-justify-content:flex-start;
     -ms-flexbox-wrap:wrap;
 }
 
+
 .col{
     width: 100%;
+
+
 }
+
 
 strong{
     font-size: 2em;
@@ -1061,10 +1064,10 @@ nav{
 
 .notice{
     width: 80%;
-    margin: 0 auto;
+    margin: 5% auto 0;
     text-align: center;
     background-color: #1874CD;
-    padding:5px;
+    padding:1px;
 }
 .notice:first-child{
     color: white;

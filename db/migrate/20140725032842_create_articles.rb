@@ -6,5 +6,6 @@ class CreateArticles < ActiveRecord::Migration
       t.text :description
       t.timestamps
     end
+    add_column :articles, :section, :string
   end
 end

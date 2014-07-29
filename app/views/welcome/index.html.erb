@@ -3,14 +3,14 @@
 		<h1>Hello There!</h1><hr>
 		<div class="wrap">
 		    <div class="col"><strong>W</strong>elcome to my website. Hopefully you find the article and/or tutorials useful or interesting.</div>
-		    <div class="col"><h5 class="gold">Recent Photos</h5><hr>
+		    <div class="col"><h5 class="gold">Recent Photos<hr></h5>
 		        <ul class="subtle">
 		        	<% @photos.each do |photo|%>
 		            <li><%=photo.title%></li>
 		            <%end%>
 		        </ul>
 		    </div>
-		    <div class="col"><h5 class="gold">Recent Posts</h5><hr>
+		    <div class="col"><h5 class="gold">Recent Posts<hr></h5>
 		        <ul class="subtle">
 		        	<%@articles.each do |article|%>
 		            <li><%=article.title%></li>
@@ -18,8 +18,8 @@
 		        </ul>
 		    </div>
 		    <div class="col">
-		        <h5 class="gold">Recent Projects</h5>
-		        <hr>
+		        <h5 class="gold">Recent Projects<hr></h5>
+		      
 		        <ul class="subtle">
 		            <li>Bidwell Storage</li>
 		            <li>Pismo Cottages</li>
