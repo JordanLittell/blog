@@ -7,5 +7,6 @@ class CreateArticles < ActiveRecord::Migration
       t.timestamps
     end
     add_column :articles, :section, :string
+    add_index :articles ,[:section, :created_at]
   end
 end

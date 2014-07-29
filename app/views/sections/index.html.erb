@@ -1,0 +1,10 @@
+<br><br><br><br><br>
+<div class="wrap">
+
+	<h1>Sections</h1>
+	<% @sections.each do |section| %> 
+	<%=section.name%><%=section.created_at.to_date%>
+	<br>
+	<%end%>
+
+</div>

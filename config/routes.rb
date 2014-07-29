@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :admins
   resources :sessions
+  resources :sections
   resources :photos
   get 'photos/create'
 
