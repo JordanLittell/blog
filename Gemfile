@@ -6,6 +6,7 @@ gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
 group :development do 
 	gem 'sqlite3'
+	gem 'better_errors'
 end
 group :development, :test do
   gem 'rspec-rails'
@@ -23,6 +24,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'd3-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'carrierwave'

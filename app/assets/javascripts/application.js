@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require d3
 
 // Avoid `console` errors in browsers that lack a console.
 (function() {
