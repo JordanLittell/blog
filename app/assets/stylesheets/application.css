@@ -92,6 +92,7 @@ button{
 
 body {
     margin: 0;
+
 }
 
 /* ==========================================================================
@@ -308,6 +309,7 @@ nav ol {
 img {
     border: 0; /* 1 */
     -ms-interpolation-mode: bicubic; /* 2 */
+    width: 100%;
 }
 
 /**
@@ -663,7 +665,7 @@ input[type="submit"]:hover{
     width: 95%;
     margin:0 auto;
     background-color: #FFF;
-    padding: 4.5em 2em 4em 2em;
+    padding: 5em 2em 4em 2em;
     border-radius: 3px;
 }
 
@@ -686,8 +688,6 @@ input[type="submit"]:hover{
     -ms-justify-content:flex-start;
     -ms-flexbox-wrap:wrap;
 }
-
-
 .col{
     width: 100%;
 }
@@ -903,6 +903,8 @@ body{
    color: #EBEBEB;
    background-color: #1c1c1c; 
    position: fixed;
+   opacity: .89;
+   height: 80px;
    border-radius: 3px;
 }
 ul{
@@ -945,7 +947,7 @@ li{
     background-color:#5F9EA0;
 }
 nav li{
-    margin: 1.2em 5%;
+    margin: 0 5%;
     display: inline-block;
     letter-spacing: 1.8px;
     font-weight: 100;

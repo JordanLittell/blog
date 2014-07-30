@@ -2,7 +2,9 @@
 <%=form_for @photo, :html => {:multipart => "true"} do |f|%>
 <h1><%=yield :title%></h1>
 <h3><%=f.label :title%></h3>
-<%=f.text_field :title%>
+<%=f.text_field :title%><br>
+<%=f.label :tags%>
+<%=f.text_field :tags%>
 <br>
 <br>
 <%=f.file_field :file_data%> <br><br>

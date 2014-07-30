@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
   	@articles = Article.all()
-  	@photos = Photos.all()
+  	@photos = Photo.all()
   end
 end

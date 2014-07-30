@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
 		@photo =Photo.new(photo_params)
 		@photo.file_data = params[:file]
 		if @photo.save!
-			redirect_to root_path, :notice => 'image upload successful'
+			redirect_to photos_path, :notice => 'image upload successful'
 		else 
 			render 'new'
 		end
@@ -38,7 +38,7 @@ end
 
 private 
 	def photo_params
-		params.require(:photo).permit(:title,:description,:file_data)
+		params.require(:photo).permit(:title,:description,:file_data,:tags)
 	end
 	def admin?
 		unless current_admin 

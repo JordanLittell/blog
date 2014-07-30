@@ -1,5 +1,6 @@
 
 <%= form_for @article do |f| %>
+
 <h1><%=yield(:title)%></h1>
   <% if @article.errors.any? %>
   <div id="error_explanation">
@@ -17,11 +18,13 @@
     <%= f.text_field :title %>
   <h3><%=f.label :description %></h3>
     <%=f.text_field :description%>
-  
   <p>
     <h3><%= f.label :text %></h3><br>
     <%= f.text_area :text %>
   </p>
+  <br>
+  <h3><%=f.label :tags%></h3><br>
+  <%=f.text_field :tags%><br>
  
   <p>
     <%= f.submit %>
