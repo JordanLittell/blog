@@ -1,7 +1,21 @@
 <h1><%=@article.title%></h1>
 <br>
 <div class="wrapper">
+	<div class="photo-gallery">
+		<%i=0%>
+		<% @photos.each do |photo| %>
+		<%if photo.tags!=nil && @article.tags!=nil && @article.tags.split(" ") & photo.tags.split(" ")!=nil  %>
+			<% if i<4 %>
+			<div class= "gallery-image" id="hide-<%=(i+1).to_s%>" >
+				<%=image_tag photo.file_data.url%>
+			</div>
+			<%i+=1%>
+			<%end%>
+		<%end%>
+	<%end%>
+	</div>
 
+	
 	<h3><i><%=@article.description%></i>
 	</h3><br>
 	<br><h4></h4>
