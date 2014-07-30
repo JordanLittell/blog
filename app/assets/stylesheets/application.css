@@ -339,7 +339,7 @@ figure {
  */
 
 form {
-    margin: 20% 0 0 0;
+    margin: 8% 0 0 0;
     text-align: center;
 }
 
@@ -663,7 +663,7 @@ input[type="submit"]:hover{
     width: 95%;
     margin:0 auto;
     background-color: #FFF;
-    padding: 4.5em 0 4em 0;
+    padding: 4.5em 2em 4em 2em;
     border-radius: 3px;
 }
 
@@ -690,8 +690,6 @@ input[type="submit"]:hover{
 
 .col{
     width: 100%;
-
-
 }
 
 

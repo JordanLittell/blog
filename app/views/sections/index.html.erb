@@ -2,6 +2,7 @@
 <div class="wrap">
 
 	<h1>Sections</h1>
+	<%=link_to "show page"%>
 	<% @sections.each do |section| %> 
 	<%=section.name%><%=section.created_at.to_date%>
 	<br>

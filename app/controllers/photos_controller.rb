@@ -19,12 +19,16 @@ class PhotosController < ApplicationController
 		@photo = Photo.find(params[:id])
 		if @photo.save
 			redirect_to photos_path, :notice => "update successful"
+		else
+			render 'new', :notice => "update not successful"
 		end
 	end
 	def destroy 
 		@photo = Photo.find(params[:id])
 		if @photo.delete 
 			redirect_to photos_path, :notice => "photo deleted"
+		else 
+			render photos_path, :notice => "Unable to delete photo"
 		end
 	end
 	def new 
