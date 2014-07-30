@@ -1,5 +1,6 @@
-<h1>Sign In</h1>
+
 <%=form_tag sessions_path, method: 'post' do %> 
+<h1>Sign In</h1>
 	<p><%=label_tag :username%>
 		<%=text_field_tag :username, params[:username]%></p>
 	<p><%=label_tag :password%>

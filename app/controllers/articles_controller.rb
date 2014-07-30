@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 		if @article.save
 			redirect_to @article
 		else
-			render 'new'
+			render 'new', :error =>"Could not submit"
 		end
 	end
 	def destroy
@@ -45,6 +45,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-		params.require(:article).permit(:title,:text,:description)
+		params.require(:article).permit(:title,:text,:description,:tags)
 	end
 end

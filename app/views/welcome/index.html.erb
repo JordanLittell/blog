@@ -1,19 +1,17 @@
 
-	<div id="container">
-		<h1>Hello There!</h1><hr>
-		<div class="wrap">
-		    <div class="col"><strong>W</strong>elcome to my website. I built this blog using Ruby with the Ruby on Rails framework. I also designed the front end with css and html5. For those who are interested, I will be writing about my path to becoming a web developer. Hopefully you find some of the content midly amusing and maybe even helpful if you are thinking about going into sofware development.</div>
+	<div class="city-img"></div>
+		<h1>Photo Here</h1><hr>
 
-		</div>
-		<div class="wrap">          
-		    <div class="col"><h5 class="gold">Recent Books</h5><hr>
+		<div class="wrap">
+		   
+		    <div class="col"><h5 class="gold">Recent Photos<hr></h5>
 		        <ul class="subtle">
-		        	
-		            <li>HTML5 Canvas</li>
-		            <li>Passionate Programmer</li>
+		        	<% @photos.each do |photo|%>
+		            <li><%=photo.title%></li>
+		            <%end%>
 		        </ul>
 		    </div>
-		    <div class="col"><h5 class="gold">Recent Posts</h5><hr>
+		    <div class="col"><h5 class="gold">Recent Posts<hr></h5>
 		        <ul class="subtle">
 		        	<%@articles.each do |article|%>
 		            <li><%=article.title%></li>
@@ -21,14 +19,26 @@
 		        </ul>
 		    </div>
 		    <div class="col">
-		        <h5 class="gold">Recent Projects</h5>
-		        <hr>
+		        <h5 class="gold">Recent Projects<hr></h5>
+		      
 		        <ul class="subtle">
 		            <li>Bidwell Storage</li>
 		            <li>Pismo Cottages</li>
 		            <li>This Site</li>
 		        </ul>
+		    </div><br>
+		    <div class="col"><h5 class="gold">Popular Tags<hr></h5>
+		        <ul class="subtle">
+		        	<% @articles.each do |article|%>
+		            <li><%=article.tags%></li>
+		            <%end%>
+		        </ul>
 		    </div>
+
+
+		</div>
+		<div class="wrap">          
+		    
 		</div>
 
 		<br>
@@ -82,12 +92,11 @@
 
 		<h2 class="sea-blue">About Me</h2><hr>
 		<div class="wrap">
-		    <div class="col">Sed semper dictum auctor. Proin nisl augue, venenatis et nulla eget, suscipit gravida lacus. Duis at libero consequat, ultrices arcu vel, lacinia lorem. Nullam dapibus, nunc non placerat gravida, felis augue viverra neque, eu hendrerit eros erat a risus. Duis pretium congue enim. Phasellus in ullamcorper diam. Nulla facilisi. In ut quam consequat, fermentum ante eu, eleifend lectus. Integer porttitor, mi a tristique tincidunt, ipsum libero lacinia orci, sed sodales nibh dolor at dolor.</div>
+		    <div class="col">I am a guy in my mid 20s enjoying life in San Francisco. I love desgining websies and apps, tinkering with electronics, creating music, and art. I graduated with a BS in Mathematics and am now attending App Academy in SF.</div>
 		</div>
 		<div class="wrap">
 		    <nav id="icon-list">
-		    <h1>Social</h1>
-		    <hr>
+		    
 		        <ul id="icon-menu">
 		            <li><span data-icon="&#xe601" class="icon" id="github"></span></li>
 		            <li><span data-icon="&#xe602" class="icon" id="linked-in"></span></li>
@@ -96,14 +105,14 @@
 		        </ul>
 		    </nav>
 
-		</div>
+		</div><br><br>
+		<h1 class="sea-blue">Words of Wisdom</h1>
 		<div class="wrap">
-		     
-		    <div class="col">
+			
 		        <span class="quote"><q>I learned this, at least, by my experiment: that if one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours.</q>
 		        <br><br>
 		        --Henry David Thoreau</span>  
-		    </div>    
+		       
 		</div>
 		<div id="loading" data-icon="&#xe606" class="icon"></div>
 
