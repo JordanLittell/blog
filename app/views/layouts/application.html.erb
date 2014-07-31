@@ -3,7 +3,9 @@
 <head>
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true 
+  %>
+ 
   <%= csrf_meta_tags %>
   		<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +14,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -31,13 +31,22 @@
 		    	<li class="main-item"><%=link_to 'Logout', log_out_path%></li>
 		    <%end%>
 		</ul>
+
 		<span id="mobile-menu-img">Menu</span>
-		<ul id="mobile-menu">
-		    
-		    <li class="main-item">Portfolio</li>
-		    <li class="main-item">Articles</li>
+		<ul id="mobile-menu"> 
+		    <li class="main-item"><%=link_to 'Home', controller: "welcome"%></a></li>
+		    <li class="main-item"><%=link_to 'Articles', articles_path%></li>
+		    <li class="main-item"><%=link_to 'Photos', photos_path%></li>
+		    <% if !current_admin %>
+		    <li class="main-item"><%=link_to 'Login', log_in_path%></li>
+		    <%end%>
+		    <% if current_admin %>
+		    	<li class="main-item"><%=link_to 'Logout', log_out_path%></li>
+		    <%end%>
+		
 		</ul>
 	</nav>
+	
 <div id="container">
 	
 	<%flash.each do |key,msg|%>
