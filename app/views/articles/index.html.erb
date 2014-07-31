@@ -1,5 +1,6 @@
 
   <h2 class="sea-blue">Articles</h2>
+  <br>
   <%if current_admin%>
   <%=link_to "Create Article", new_article_path%>
   <%end%>
@@ -26,6 +27,9 @@
           <%end%>
         </tr>
       <% end %>
+      <div id="infinite-scrolling">
+        <%= will_paginate %>
+      </div>
     </table>
   </div>
   
