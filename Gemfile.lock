@@ -27,6 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
@@ -35,6 +36,12 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     builder (3.2.2)
+    capybara (2.4.1)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -60,12 +67,17 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     minitest (5.4.0)
     multi_json (1.10.1)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -143,6 +155,8 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -150,10 +164,12 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   better_errors
+  capybara
   carrierwave
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  launchy
   pg
   rails (= 4.1.1)
   rails_12factor

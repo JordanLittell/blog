@@ -1,5 +1,10 @@
 require 'spec_helper'
+describe "Static pages" do
 
-describe "photos/new.html.erb" do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Home page" do
+    it "should have the content 'Photos'" do
+      visit photos_path 
+      expect(page).to have_content('Photos')
+    end
+  end
 end
