@@ -1,7 +1,34 @@
 
 		<h1>City Image</h1><br>
 		<div class="wrap">
-		   
+		   	<div class="col">
+		        <h5 class="gold">Recent Articles<hr></h5>
+		      
+		        <ul class="subtle">
+		            <%@articles.each_with_index do |article,j|%>
+			            <% if j<4%>
+			            	<li><%=article.title%></li>
+			            <%else%>
+			            	<%break%>
+			            <%end%>
+		            <%end%>
+		        </ul>
+		    </div><br>
+
+		    <div class="col">
+		        <h5 class="gold">Recent Photos<hr></h5>
+		      
+		        <ul class="subtle">
+		            <%@photos.each_with_index do |photo,j|%>
+			            <% if j<4%>
+			            	<li><%=photo.title%></li>
+			            <%else%>
+			            	<%break%>
+			            <%end%>
+		            <%end%>
+		        </ul>
+		    </div><br>
+
 		    <div class="col">
 		        <h5 class="gold">Recent Projects<hr></h5>
 		      
@@ -13,13 +40,13 @@
 		    </div><br>
 		    <div class="col"><h5 class="gold">Popular Tags<hr></h5>
 		        <ul class="subtle">
-		        	<% @articles.each do |article|%>
+		        	<% @articles.each_with_index do |article,j|%>
+		        	<% if j < 4 %>
 		            <li><%=article.tags%></li>
+		            <%end%>
 		            <%end%>
 		        </ul>
 		    </div>
-
-
 		</div>
 		<div class="wrap">          
 		    

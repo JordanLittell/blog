@@ -1,0 +1,7 @@
+<%@articles.each_with_index do |article,j|%>
+	<% if j<4%>
+		<%=resource.title%>
+	<%else%>
+	<%break%>
+	<%end%>
+<%end%>

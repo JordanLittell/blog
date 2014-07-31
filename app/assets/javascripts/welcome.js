@@ -99,7 +99,6 @@ $(document).on('page:load',function(){
 	    $("#mobile-menu").hide();
 	  }
 	});
-  $('html').css('overflow', 'hidden');
   $("#mobile-menu-img").click(function(event){
   	console.log('event trigger');
     event.stopPropagation();
