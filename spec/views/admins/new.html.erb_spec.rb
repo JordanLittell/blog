@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe "admins/new.html.erb" do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before {v}
 end
