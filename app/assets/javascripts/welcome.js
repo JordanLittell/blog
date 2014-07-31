@@ -80,7 +80,7 @@ $(document).ready(function(){
 	    $("#mobile-menu").hide();
 	  }
 	});
-  $("#main").click(function(event){
+  $("#mobile-menu-img").click(function(event){
  	event.stopPropagation();
     $("#mobile-menu").slideDown("slow");
   });
@@ -100,7 +100,7 @@ $(document).on('page:load',function(){
 	  }
 	});
   $('html').css('overflow', 'hidden');
-  $("#main").click(function(event){
+  $("#mobile-menu-img").click(function(event){
   	console.log('event trigger');
     event.stopPropagation();
     $("#mobile-menu").slideDown("slow");
