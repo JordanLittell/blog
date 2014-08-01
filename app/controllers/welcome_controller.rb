@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-  	@articles = Article.all()
-  	@photos = Photo.all()
+  	@articles = Article.order(date: :desc);
+  	@photos = Photo.order(created_at: :desc);
   end
 end
