@@ -7,6 +7,7 @@
 </div>
 <br><br><Br>
 <div class="photo-gallery">
+	<%=will_paginate @photos%>
 	<%@photos.each do |photo| %>
 		<%url = photo.file_data.url%>
 

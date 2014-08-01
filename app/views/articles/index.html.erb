@@ -1,13 +1,15 @@
+  
   <div class="wrap">
     <h2 class="sea-blue">Articles</h2>
     <br>
   <%if current_admin%>
-  <%=link_to "Create Article", new_article_path%>
+    <%=link_to "Create Article", new_article_path%>
   <%end%>
   </div>
+  <div></div>
   <div class="wrap">
 
-    <table>
+    <table id="ajax-table">
       <tr>
         <th>Title</th>
         <th>Description</th>
@@ -15,19 +17,20 @@
         <% if current_admin%>
         <th>Options</th>
         <%end%>
-      </tr>
+     
+        <%=render partial: 'article_list', locals: {items: @articles[0..4]}%>
 
-      <% @articles.each do |article| %>
-        <tr>
-          <td><%= link_to "#{article.title}", article_path(article) %></td>
-          <td><%= article.description %></td>
-          
-          <td><%=article.created_at.to_formatted_s(:long)%></td>
-          <% if current_admin %>
-          <td><%=link_to 'edit', edit_article_path(article)%><%=link_to 'delete',article_path(article), method: :delete%></td>
-          <%end%>
-        </tr>
-      <% end %>
+    </table>
+    <table id="dates">
+      
+      <%(@times.length-1).times do |j|%>
+        <% if @times[j].strftime('%^b %Y') != @times[j+1].strftime('%^b %Y')%>
+        <tr><td>
+          <%=link_to @times[j].strftime('%^b %Y'), fetch_articles_path(:time =>@times[j]), :remote=>true%></td></tr>
+        <tr><td>
+          <%=link_to @times[j+1].strftime('%^b %Y'), fetch_articles_path(:time =>@times[j+1]), :remote=>true%></td></tr>
+        <%end%>
+      <%end%>
     </table>
   </div>
   

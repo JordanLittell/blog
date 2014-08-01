@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'admins/new'
   get "log_in" => "sessions#new", :as =>'log_in'
   get "log_out" => "sessions#destroy", :as => 'log_out'
+  get "/fetch_articles" => 'articles#from_category', as: 'fetch_articles'
   
   get 'welcome/index'
 

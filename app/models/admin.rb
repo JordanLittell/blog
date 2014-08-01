@@ -23,6 +23,4 @@ class Admin < ActiveRecord::Base
 			password_hash
 		end
 	end
-	
-
 end

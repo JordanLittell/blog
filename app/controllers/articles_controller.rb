@@ -23,8 +23,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-
-		@articles = Article.paginate(:page => params[:page], :per_page => 10)
+		@articles = Article.all()
+		@times = dates(@articles)
 	end
 	def edit 
 		@article = Article.find(params[:id])
@@ -39,6 +39,13 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	def from_category
+		@selected_articles = Article.where("created_at = ?",params[:created_at])
+		respond_to do |format|
+			format.js
+		end
+	end
+
 	private 
 	def admin? 
 		if !current_admin 
@@ -49,4 +56,12 @@ class ArticlesController < ApplicationController
 	def article_params
 		params.require(:article).permit(:title,:text,:description,:tags)
 	end
+	def dates(articles)
+		dates = []
+		articles.each do |article|
+			dates << article.created_at
+		end
+		dates
+	end
+
 end

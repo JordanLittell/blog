@@ -1,14 +1,15 @@
 class AdminsController < ApplicationController
+
 	def new 
 		@admin = Admin.new
 		render 'new'
 	end
 	def create
 		@admin = Admin.new(admin_params)
-		if @admin.save
+		if Admin.all().length>=1
+			render 'new', :notice=>"nice try"
+		elsif @admin.save
 			redirect_to root_url, :notice => "Welcome"
-		else 
-			render 'new'
 		end
 	end
 
