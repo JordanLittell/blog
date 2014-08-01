@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get "log_in" => "sessions#new", :as =>'log_in'
   get "log_out" => "sessions#destroy", :as => 'log_out'
   get "/fetch_articles" => 'articles#from_category', as: 'fetch_articles'
-  
+  get "/next_articles" => "articles#next_articles", as: "next_articles"
+  get "/previous_articles" => "articles#previous_articles", as: "previous_articles"
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

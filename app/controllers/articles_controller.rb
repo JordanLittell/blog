@@ -26,8 +26,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.order(created_at: :desc)
-		@times = dates(@articles)
+		@all_articles = Article.order(created_at: :desc)
+		@articles =@all_articles[0..5]
+		@times = dates(@all_articles)
 	end
 	def edit 
 		@article = Article.find(params[:id])
@@ -46,6 +47,18 @@ class ArticlesController < ApplicationController
 		@selected_articles = Article.where("date = ?",params[:time])
 		respond_to do |format|
 			format.js.erb
+		end
+	end
+	def next_articles
+		@articles = Article.order(created_at: :desc)[params[:index].to_i..params[:index].to_i+5]
+		respond_to do |format|
+			format.js
+		end
+	end
+	def previous_articles
+		@articles = Article.order(created_at: :desc)[params[:index].to_i-10..params[:index].to_i]
+		respond_to do |format|
+			format.js
 		end
 	end
 
