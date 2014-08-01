@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :articles
-  resources :admins
-  resources :sessions
-  resources :photos
+  resources :articles, :admins, :sessions, :photos
   get 'photos/create'
 
   get 'photos/destroy'

@@ -8,6 +8,7 @@
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
 
+
 article,
 aside,
 details,
@@ -692,19 +693,19 @@ input[type="submit"]:hover{
     text-align: center;
 }
 #cathedral{
-    background-image: url(<%=asset_path 'cathedral.JPG'%>);
+    background-image: url(/assets/cathedral.JPG);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 717px;
 }
 #fountains{
-    background-image: url(<%=asset_path 'fountains.JPG'%>);
+    background-image: url(/assets/fountains.JPG);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 717px;
 }
 #basque{
-    background-image: url(<%=asset_path 'basque.JPG'%>);
+    background-image: url(/assets/basque.JPG);
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -781,7 +782,7 @@ h1,h2,h3,h4,h5,h6{
 q:before { 
     content: '\201C'; 
     font-size:200%;
-    font-family:'IM Fell French Canon SC',georgia, serif; 
+    font-family:'IM Fell French Canon SC',georgia, serif ; 
     color: #7AC5CD;
 } 
 q:after { 
@@ -798,6 +799,7 @@ q:after {
     line-height: .3333em;
     letter-spacing: 3px;
     text-align: center;
+
 }
 
 h1{
@@ -876,6 +878,11 @@ h4{
     background-color: #404040;
 }
 
+.city-img{
+    width: 100%;
+    height: 600px;
+    background-image: url(/assets/city.jpg);
+}
 
 
 /* ==========================================================================
