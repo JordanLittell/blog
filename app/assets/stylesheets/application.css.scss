@@ -699,20 +699,9 @@ input[type="submit"]:hover{
     font-weight: 100;
     text-align: center;
 }
-#cathedral{
-    background-image: url(<%=asset_path 'cathedral.JPG'%>);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 717px;
-}
-#fountains{
-    background-image: url(<%=asset_path 'fountains.JPG'%>);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 717px;
-}
+
 #basque{
-    background-image: url(<%=asset_path 'basque.JPG'%>);
+    background-image: image-url("basque.JPG");
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
