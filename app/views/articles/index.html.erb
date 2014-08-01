@@ -17,21 +17,21 @@
         <% if current_admin%>
         <th>Options</th>
         <%end%>
-     
         <%=render partial: 'article_list', locals: {items: @articles[0..4]}%>
-
     </table>
+
     <table id="dates">
-      
       <%(@times.length-1).times do |j|%>
         <% if @times[j].strftime('%^b %Y') != @times[j+1].strftime('%^b %Y')%>
         <tr><td>
-          <%=link_to @times[j].strftime('%^b %Y'), fetch_articles_path(:time =>@times[j]), :remote=>true%></td></tr>
+          <%=link_to @times[j].strftime('%^b %Y'), fetch_articles_path(:time =>@times[j].strftime('%^b %Y')), :remote=>true%></td></tr>
         <tr><td>
-          <%=link_to @times[j+1].strftime('%^b %Y'), fetch_articles_path(:time =>@times[j+1]), :remote=>true%></td></tr>
+          <%=link_to @times[j+1].strftime('%^b %Y'), fetch_articles_path(:time =>@times[j+1].strftime('%^b %Y')), :remote=>true%></td></tr>
         <%end%>
       <%end%>
     </table>
+
+
   </div>
   
   <br><br>

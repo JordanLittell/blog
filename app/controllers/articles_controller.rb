@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def from_category
-		@selected_articles = Article.where("created_at = ?",params[:created_at])
+		@selected_articles = Article.where("date = ?",params[:time])
 		respond_to do |format|
 			format.js
 		end
@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-		params.require(:article).permit(:title,:text,:description,:tags)
+		params.require(:article).permit(:title,:text,:description,:tags,:date)
 	end
 	def dates(articles)
 		dates = []
