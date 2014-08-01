@@ -1,7 +1,10 @@
 class ArticlesController < ApplicationController
+	attr_accessor :date
 	before_action :admin?,only:[:new,:destroy,:update,:edit,:create]
+
 	def create
 		@article = Article.new(article_params)
+		@article.date = Time.now.strftime("%b %Y")
 		if @article.save
 			redirect_to @article
 		else
@@ -42,7 +45,7 @@ class ArticlesController < ApplicationController
 	def from_category
 		@selected_articles = Article.where("date = ?",params[:time])
 		respond_to do |format|
-			format.js
+			format.js.erb
 		end
 	end
 
@@ -56,6 +59,7 @@ class ArticlesController < ApplicationController
 	def article_params
 		params.require(:article).permit(:title,:text,:description,:tags,:date)
 	end
+
 	def dates(articles)
 		dates = []
 		articles.each do |article|
