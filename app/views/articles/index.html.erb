@@ -1,9 +1,10 @@
-
-  <h2 class="sea-blue">Articles</h2>
-  <br>
+  <div class="wrap">
+    <h2 class="sea-blue">Articles</h2>
+    <br>
   <%if current_admin%>
   <%=link_to "Create Article", new_article_path%>
   <%end%>
+  </div>
   <div class="wrap">
 
     <table>
@@ -27,12 +28,10 @@
           <%end%>
         </tr>
       <% end %>
-      <div id="infinite-scrolling">
-        <%= will_paginate %>
-      </div>
     </table>
   </div>
   
   <br><br>
+
 
 

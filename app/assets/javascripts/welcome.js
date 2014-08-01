@@ -1,7 +1,4 @@
 
-
-
-
 // Avoid `console` errors in browsers that lack a console.
 console.log("testing js");
 (function() {
@@ -86,14 +83,20 @@ $(document).ready(function(){
   });
   $('#mobile-menu').click(function(event){
     event.stopPropagation();
-    $("#mobile-menu").slideUp("slow");
+    $(this).slideUp("slow");
   });
-
-})
+ 
+});
 $(document).on('page:load',function(){
 	console.log("page load triggered");
 
-
+  $('#basque').bind('scroll', function() {
+    console.log($(this).innerHeight)
+    console.log($(this).scrollTop());
+        if($(this).scrollTop() + $(this).innerHeight() >= this.scrollHeight) {
+            console.log('end reached');
+        }
+    })
 	$(window).resize(function(){
 	  if ($(window).width()>=845){
 	    $("#mobile-menu").hide();
@@ -108,4 +111,5 @@ $(document).on('page:load',function(){
     event.stopPropagation();
     $("#mobile-menu").slideUp("slow");
   });
+  
 })

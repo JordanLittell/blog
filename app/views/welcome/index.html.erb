@@ -1,76 +1,58 @@
 
-		
-		<div class="city-img">
+		<div id="basque">
 			
-				
-		
-		</div>
-		<div class="wrap">
-		   	<div class="col">
-		        <h5 class="gold">Recent Articles<hr></h5>
-		      
-		        <ul class="subtle">
-		            <%@articles.each_with_index do |article,j|%>
-			            <% if j<4%>
-			            	<li><%=article.title%></li>
-			            <%else%>
-			            	<%break%>
+			
+			
+			<div class="wrap">
+				<div id="updates">
+					<h4 class="gold">Recent Activity</h4>
+					<ul>
+			            <%@articles.each_with_index do |article,j|%>
+				            <% if j<4%>
+				            	<li>created <%=article.title%></li>
+				            <%else%>
+				            	<%break%>
+				            <%end%>
 			            <%end%>
-		            <%end%>
-		        </ul>
-		    </div><br>
-
-		    <div class="col">
-		        <h5 class="gold">Recent Photos<hr></h5>
-		      
-		        <ul class="subtle">
-		            <%@photos.each_with_index do |photo,j|%>
-			            <% if j<4%>
-			            	<li><%=photo.title%></li>
-			            <%else%>
-			            	<%break%>
+			        </ul>
+			        <ul>
+			            <%@photos.each_with_index do |photo,j|%>
+				            <% if j<4%>
+				            	<li>created <%=photo.title%></li>
+				            <%else%>
+				            	<%break%>
+				            <%end%>
 			            <%end%>
-		            <%end%>
-		        </ul>
-		    </div><br>
-
-		    <div class="col">
-		        <h5 class="gold">Recent Projects<hr></h5>
-		      
-		        <ul class="subtle">
-		            <li>Bidwell Storage</li>
-		            <li>Pismo Cottages</li>
-		            <li>This Site</li>
-		        </ul>
-		    </div><br>
-		    <div class="col"><h5 class="gold">Popular Tags<hr></h5>
-		        <ul class="subtle">
-		        	<% @articles.each_with_index do |article,j|%>
-		        	<% if j < 4 %>
-		            <li><%=article.tags%></li>
-		            <%end%>
-		            <%end%>
-		        </ul>
-		    </div>
-		</div>
-		<div class="wrap">          
-		    
+			        </ul>
+			        <ul>
+			            <%@photos.each_with_index do |photo,j|%>
+				            <% if j<4%>
+				            	<li>created <%=photo.title%></li>
+				            <%else%>
+				            	<%break%>
+				            <%end%>
+			            <%end%>
+			        </ul>
+				</div>
+				<div id="header">Hello!</div>
+			</div>
 		</div>
 
 		<br>
-		<section>
-		<h2>Header 2</h2>
-		<hr>
-		<div class="wrap">
-		    <div class="col">
-		        Pellentesque a erat arcu. Nunc adipiscing vulputate faucibus. Etiam et venenatis odio. Ut faucibus pellentesque leo nec sagittis. Fusce congue diam sem, et blandit nisl lobortis in. Nullam quis laoreet nisi. Vivamus ante metus, accumsan nec ipsum et, euismod accumsan purus. Aliquam eu eros posuere, fringilla orci at, luctus turpis. Ut mollis, ipsum sed fringilla semper, turpis magna egestas nisi, aliquam semper nunc magna lobortis risus. Morbi vel iaculis tortor. Sed urna neque, pretium sit amet malesuada sed, venenatis consequat ligula. Vivamus volutpat velit sed nulla imperdiet, in suscipit nisl ornare.
-		    </div>
+	
+		
+			<br>
+			<h2 class="gold">Header 2</h2>
+			<hr>
+			<div class="wrap">
+			    <div class="col">
+			        Pellentesque a erat arcu. Nunc adipiscing vulputate faucibus. Etiam et venenatis odio. Ut faucibus pellentesque leo nec sagittis. Fusce congue diam sem, et blandit nisl lobortis in. Nullam quis laoreet nisi. Vivamus ante metus, accumsan nec ipsum et, euismod accumsan purus. Aliquam eu eros posuere, fringilla orci at, luctus turpis. Ut mollis, ipsum sed fringilla semper, turpis magna egestas nisi, aliquam semper nunc magna lobortis risus. Morbi vel iaculis tortor. Sed urna neque, pretium sit amet malesuada sed, venenatis consequat ligula. Vivamus volutpat velit sed nulla imperdiet, in suscipit nisl ornare.
+			    </div>
 
-		</div>
+			</div>
 
-		</section>
+		
 
-		<section>
 		<h3 class="light-blue">This is a 3rd level header</h3>
 		    <h3 class="gold">This is a 3rd level header</h3>
 		    <h3 class="subtle">This is a 3rd level header</h3>

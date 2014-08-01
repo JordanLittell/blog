@@ -1,9 +1,10 @@
-
+<div class="wrap">
 <h1>Photos</h1>
 
 <% if current_admin%>
 	<%=link_to 'create new', photos_new_path %>
 <%end%>
+</div>
 <br><br><Br>
 <div class="photo-gallery">
 	<%@photos.each do |photo| %>
