@@ -9,7 +9,7 @@
 					<ul>
 			            <%@articles.each_with_index do |article,j|%>
 				            <% if j<4%>
-				            	<li>created <%=article.title%></li>
+				            	<li>Added <%=article.class.to_s.downcase%>: <%=article.title%> (<%=((Time.now-article.created_at)/(24*60)).floor/24%> days ago)</li>
 				            <%else%>
 				            	<%break%>
 				            <%end%>
@@ -18,21 +18,13 @@
 			        <ul>
 			            <%@photos.each_with_index do |photo,j|%>
 				            <% if j<4%>
-				            	<li>created <%=photo.title%></li>
+				            	<li>Added <%=photo.class.to_s.downcase%>: <%=photo.title%> (<%=((Time.now-photo.created_at)/(24*60)).floor/24%> days ago)</li>
 				            <%else%>
 				            	<%break%>
 				            <%end%>
 			            <%end%>
 			        </ul>
-			        <ul>
-			            <%@photos.each_with_index do |photo,j|%>
-				            <% if j<4%>
-				            	<li>created <%=photo.title%></li>
-				            <%else%>
-				            	<%break%>
-				            <%end%>
-			            <%end%>
-			        </ul>
+			        
 				</div>
 				<div id="header">Hello!</div>
 			</div>
@@ -42,11 +34,12 @@
 	
 		
 			<br>
-			<h2 class="gold">Header 2</h2>
+			<h2 class="gold">A word from the creator:</h2>
 			<hr>
 			<div class="wrap">
 			    <div class="col">
-			        Pellentesque a erat arcu. Nunc adipiscing vulputate faucibus. Etiam et venenatis odio. Ut faucibus pellentesque leo nec sagittis. Fusce congue diam sem, et blandit nisl lobortis in. Nullam quis laoreet nisi. Vivamus ante metus, accumsan nec ipsum et, euismod accumsan purus. Aliquam eu eros posuere, fringilla orci at, luctus turpis. Ut mollis, ipsum sed fringilla semper, turpis magna egestas nisi, aliquam semper nunc magna lobortis risus. Morbi vel iaculis tortor. Sed urna neque, pretium sit amet malesuada sed, venenatis consequat ligula. Vivamus volutpat velit sed nulla imperdiet, in suscipit nisl ornare.
+			    	<p>
+			        Pellentesque a erat arcu. Nunc adipiscing vulputate faucibus. Etiam et venenatis odio. Ut faucibus pellentesque leo nec sagittis. Fusce congue diam sem, et blandit nisl lobortis in. Nullam quis laoreet nisi. Vivamus ante metus, accumsan nec ipsum et, euismod accumsan purus. Aliquam eu eros posuere, fringilla orci at, luctus turpis. Ut mollis, ipsum sed fringilla semper, turpis magna egestas nisi, aliquam semper nunc magna lobortis risus. Morbi vel iaculis tortor. Sed urna neque, pretium sit amet malesuada sed, venenatis consequat ligula. Vivamus volutpat velit sed nulla imperdiet, in suscipit nisl ornare.</p>
 			    </div>
 
 			</div>
@@ -66,7 +59,7 @@
 		</section>
 
 		<section>
-		<h4>Header 4</h4>
+		<h2 class="gold">About this website</h2>
 		<hr>
 		<div class="wrap">
 		    
