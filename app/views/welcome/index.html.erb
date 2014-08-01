@@ -7,7 +7,7 @@
 			            <%@articles.each_with_index do |article,j|%>
 				            <% if j<4%>
 						<%created = ((Time.now-article.created_at)/(24*60)).floor/24%>
-				            	<li>Added <%=article.class.to_s.downcase%>: <%=article.title%> <%if created>0%><%=created.to_s%> days ago<%else%>today<%end%></li>
+				            	<li>Added <%=article.class.to_s.downcase%>: <%=article.title%> <%if created>0%><%=created.to_s%> days ago<%else%>(today)<%end%></li>
 				            <%else%>
 				            	<%break%>
 				            <%end%>
