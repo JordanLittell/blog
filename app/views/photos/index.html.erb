@@ -1,27 +1,29 @@
-<div class="wrap">
-<h1>Photos</h1>
+<div id="container">
+	<div class="wrap">
+	<h1>Photos</h1>
 
-<% if current_admin%>
-	<%=link_to 'create new', photos_new_path %>
-<%end%>
-</div>
-<br><br><Br>
-<div class="photo-gallery">
-	<%=will_paginate @photos%>
-	<%@photos.each do |photo| %>
-		<%url = photo.file_data.url%>
-
-		<div class="gallery-image">
-			<hr>
-			<h4><%=photo.title%></h4>
-			<img src = <%="#{url}"%> class="gallery-image"/>
-			<ul>
-				<% if current_admin %>
-			<%= link_to "delete",photo_path(photo), :method=>:delete%>
-			<%=link_to "edit", edit_photo_path(photo), :method => "get"%>
-			<%end%>
-			</ul>
-		</div>
-		<hr>
+	<% if current_admin%>
+		<%=link_to 'create new', photos_new_path %>
 	<%end%>
+	</div>
+	<br><br><Br>
+	<div class="photo-gallery">
+		<%=will_paginate @photos%>
+		<%@photos.each do |photo| %>
+			<%url = photo.file_data.url%>
+
+			<div class="gallery-image">
+				<hr>
+				<h4><%=photo.title%></h4>
+				<img src = <%="#{url}"%> class="gallery-image"/>
+				<ul>
+					<% if current_admin %>
+				<%= link_to "delete",photo_path(photo), :method=>:delete%>
+				<%=link_to "edit", edit_photo_path(photo), :method => "get"%>
+				<%end%>
+				</ul>
+			</div>
+			<hr>
+		<%end%>
+	</div>
 </div>
