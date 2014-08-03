@@ -11,7 +11,7 @@ class PhotosController < ApplicationController
 	end
 	def index
 		
-		@photos = Photo.page(params[:page]).order('created_at DESC')
+		@photos = Photo.all()
 	end
 	def edit
 		@photo = Photo.find(params[:id])
