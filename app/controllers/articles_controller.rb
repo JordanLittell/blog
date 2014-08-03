@@ -26,9 +26,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@all_articles = Article.order(created_at: :desc)
-		@articles =@all_articles[0..5]
-		@times = dates(@all_articles)
+		@articles = Article.order(created_at: :desc)
+		@times = dates(@articles)
 	end
 	def edit 
 		@article = Article.find(params[:id])

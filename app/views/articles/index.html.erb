@@ -6,10 +6,7 @@
       <%=link_to "Create Article", new_article_path%>
     <%end%>
   </div>
-  <div id="ajax-nav">
-    <%=link_to 'previous', previous_articles_path(:index=>@articles.last.id.to_i),:remote=>true%>
-    <%=link_to 'next',next_articles_path(:index=>@articles.first.id.to_i),:remote=>true%>
-  </div>
+  
   <div class="wrap">
     <table id="ajax-table">
         <%=render partial: 'article_list', locals: {items: @articles}%>

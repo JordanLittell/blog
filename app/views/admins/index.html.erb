@@ -3,16 +3,18 @@
 
 	<div id="lights">
 		<br>
-		<h1 class="black">About Me</h1>
+		
 		<div class="wrap">
 			<%=image_tag "cathedral.JPG",:id=> "profile-img"%>
 
 			<% if current_admin%>
 			<%= render :partial=> '/stats/form'%>
 			<%else%>
-			<div class="wrap" id="updates">
-				Lorem ipsum dolor sit amet, nam no modus omittantur, pro tollit mollis probatus ut. Vivendo percipit qui no, mei qualisque vulputate id, ex mei congue qualisque repudiandae. Vis in nostro aliquid tibique. Inermis phaedrum prodesset ut qui. Mel id tollit ridens.
-
+			<div class="wrap">
+				<div id='updates'>
+					<h2 class="gold">About Me</h2>
+					<p>Sed semper dictum auctor. Proin nisl augue, venenatis et nulla eget, suscipit gravida lacus. Duis at libero consequat, ultrices arcu vel, lacinia lorem. Nullam dapibus, nunc non placerat gravida, felis augue viverra neque, eu hendrerit eros erat a risus. Duis pretium congue enim. Phasellus in ullamcorper diam. Nulla facilisi. In ut quam consequat, fermentum ante eu, eleifend lectus. Integer porttitor, mi a tristique tincidunt, ipsum libero lacinia orci, sed sodales nibh dolor at dolor.</p>
+				</div>
 			</div>
 			<%end%>
 		</div>
