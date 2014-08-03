@@ -1,10 +1,21 @@
 
 <div id="container">
-	<h1 class="gold">About Me</h1>
 
-	<div class="wrap">
-		<%=image_tag "cathedral.JPG",:id=> "profile-img"%>
-		<%= render :partial=> '/stats/form'%>
+	<div id="lights">
+		<br>
+		<h1 class="black">About Me</h1>
+		<div class="wrap">
+			<%=image_tag "cathedral.JPG",:id=> "profile-img"%>
+
+			<% if current_admin%>
+			<%= render :partial=> '/stats/form'%>
+			<%else%>
+			<div class="wrap" id="updates">
+				Lorem ipsum dolor sit amet, nam no modus omittantur, pro tollit mollis probatus ut. Vivendo percipit qui no, mei qualisque vulputate id, ex mei congue qualisque repudiandae. Vis in nostro aliquid tibique. Inermis phaedrum prodesset ut qui. Mel id tollit ridens.
+
+			</div>
+			<%end%>
+		</div>
 	</div>
 
 	<div class="wrap" id ="graph">
@@ -14,12 +25,13 @@
 			<%sleep=[]%>
 			<%work = []%>
 			<%day =[]%>
-			<%x_axis=[]%>
+			<%fitness=[]%>
 			<%@stats.each do |stat|%>
 				<% caffeine << [stat.created_at.to_date,stat.mg_caffeine/100]%>
 				<% sleep << [stat.created_at.to_date,stat.hours_slept]%>
 				<% work << [stat.created_at.to_date,stat.hours_worked]%>
 				<% day << [stat.created_at.to_date,stat.day_rating]%>
+				<% fitness << [stat.created_at.to_date,stat.hours_fitness]%>
 
 			<%end%>	
 			<h3 class="gold">Activity Chart</h3>
@@ -27,7 +39,8 @@
 				{:name=>"caffeine", :data=>caffeine},
 				{:name=>"sleep",:data=>sleep},
 				{:name=>"work",:data=>work},
-				{:name=>"day",:data=>day}
+				{:name=>"day",:data=>day},
+				{:name=>"fitness",:data=>fitness}
 			],library:{title:"Activity Tracker",backgroundColor:"black"} %>
 		</div>
 

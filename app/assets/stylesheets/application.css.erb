@@ -672,6 +672,7 @@ input[type="submit"]:hover{
 #updates{
     background-color: black;
     max-height: 300px;
+    padding:10px;
     overflow: scroll;
     opacity: .8;
     z-index: 0;
@@ -696,6 +697,9 @@ input[type="submit"]:hover{
     color:green;
 
 }
+.black{
+    color: #121212;
+}
 #header{
     width: 70%;
     font-family:'IM Fell French Canon SC', georgia, serif;
@@ -710,8 +714,14 @@ input[type="submit"]:hover{
     background-image: url('<%= asset_path "basque.jpg" %>');
     background-size: 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-   
+    background-attachment: fixed; 
+}
+#lights{
+    background-image: url("<%=asset_path 'cathedral.JPG'%>"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    min-height: 500px;
 }
 #nav-clear{
     height: 80px;

@@ -23,12 +23,17 @@
 			<li class="main-item"><%=link_to 'Home', controller: "welcome"%></a></li>
 		    <li class="main-item"><%=link_to 'Articles', articles_path%></li>
 		    <li class="main-item"><%=link_to 'Photos', photos_path%></li>
+		    <li class="main-item"> <%=link_to 'About', admins_path%></li>
+
 		    <% if !current_admin %>
 		    <li class="main-item"><%=link_to 'Login', log_in_path%></li>
+
+
 		    <%end%>
 		    <% if current_admin %>
 		    	<li class="main-item"><%=link_to 'Logout', log_out_path%></li>
-		    	<li class="main-item"> <%=link_to 'Profile', admins_path%></li>
+		    	
+
 		    <%end%>
 		</ul>
 
@@ -42,7 +47,8 @@
 		    <%end%>
 		    <% if current_admin %>
 		    	<li class="main-item"><%=link_to 'Logout', log_out_path%></li>
-		    	<li class="main-item"> <%=link_to 'Profile', admins_path%></li>
+		    	
+
 		    <%end%>
 		
 		</ul>

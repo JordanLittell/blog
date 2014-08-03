@@ -1,5 +1,5 @@
 class StatsController < ApplicationController
-
+	before_action :admin?,only:[:new,:destroy,:update,:edit,:create]
 	def create
 		@stat = Stat.new(stats_params)
 		if @stat.save!
