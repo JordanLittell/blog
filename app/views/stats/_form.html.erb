@@ -1,13 +1,15 @@
 <div id="stats-updates">
 	<%=form_for @stat do |f| %>
-		<h3><%=f.label :hours_slept%></h3><br>
+		<h4><%=f.label :hours_slept%></h4><br>
 		<%=f.number_field :hours_slept%><br>
-		<h3><%=f.label :hours_worked%></h3><br>
+		<h4><%=f.label :hours_worked%></h4><br>
 		<%=f.number_field :hours_worked%><br>
-		<h3><%=f.label :mg_caffeine%></h3><br>
+		<h4><%=f.label :mg_caffeine%></h4><br>
 		<%=f.number_field :mg_caffeine%><br>
-		<h3><%=f.label :day_rating%></h3><br>
+		<h4><%=f.label :day_rating%></h4><br>
 		<%=f.number_field(:day_rating )%><br><br>
+		<h4><%=f.label :hours_fitness%></h4><br>
+		<%=f.number_field(:hours_fitness )%><br><br>
 
 		<%=f.submit :submit%>
 	<%end%>

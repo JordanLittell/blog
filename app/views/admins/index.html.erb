@@ -16,14 +16,19 @@
 			<%day =[]%>
 			<%x_axis=[]%>
 			<%@stats.each do |stat|%>
-				<% caffeine << [stat.created_at,stat.mg_caffeine]%>
-				<% sleep << [stat.created_at,stat.hours_slept]%>
-				<% work << [stat.created_at,stat.hours_worked]%>
-				<% day << [stat.created_at,stat.day_rating]%>
+				<% caffeine << [stat.created_at.to_date,stat.mg_caffeine/100]%>
+				<% sleep << [stat.created_at.to_date,stat.hours_slept]%>
+				<% work << [stat.created_at.to_date,stat.hours_worked]%>
+				<% day << [stat.created_at.to_date,stat.day_rating]%>
 
 			<%end%>	
-			<h4 class="gold">Completely unecessary graph:</h4>
-			<%= line_chart caffeine, id:"chart", colors: ["#FFC125"],backgroundColor:"#FFF",height: "300px",width:"500px" %>
+			<h3 class="gold">Activity Chart</h3>
+			<%= line_chart [
+				{:name=>"caffeine", :data=>caffeine},
+				{:name=>"sleep",:data=>sleep},
+				{:name=>"work",:data=>work},
+				{:name=>"day",:data=>day}
+			],library:{title:"Activity Tracker",backgroundColor:"black"} %>
 		</div>
 
 		
