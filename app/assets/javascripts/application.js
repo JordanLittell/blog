@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= depend_on_asset "basque.jpg"
+//= require d3
+
 
 

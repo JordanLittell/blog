@@ -1,7 +1,7 @@
 class Admin < ActiveRecord::Base
 	attr_accessor :password
+	has_many :stats
 	before_save :encrypt_password
-
 	validates_confirmation_of :password
 	validates_presence_of :password, :on => :create
 	validates_presence_of :username

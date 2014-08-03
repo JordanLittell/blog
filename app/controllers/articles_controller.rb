@@ -46,19 +46,22 @@ class ArticlesController < ApplicationController
 	def from_category
 		@selected_articles = Article.where("date = ?",params[:time])
 		respond_to do |format|
-			format.js.erb
+			format.js
+			format.html{redirect_to(articles_path)}
 		end
 	end
 	def next_articles
 		@articles = Article.order(created_at: :desc)[params[:index].to_i..params[:index].to_i+5]
 		respond_to do |format|
 			format.js
+			format.html{redirect_to(articles_path)}
 		end
 	end
 	def previous_articles
 		@articles = Article.order(created_at: :desc)[params[:index].to_i-10..params[:index].to_i]
 		respond_to do |format|
 			format.js
+			format.html{redirect_to(articles_path)}
 		end
 	end
 

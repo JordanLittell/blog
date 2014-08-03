@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :articles, :admins, :sessions, :photos
+  resources :articles, :admins, :sessions, :photos, :stats
+  get 'stats/create'
+
+  get 'stats/destroy'
+
+  get 'create/destroy'
+
+  
   get 'photos/create'
 
   get 'photos/destroy'

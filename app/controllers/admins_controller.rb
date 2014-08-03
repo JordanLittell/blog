@@ -12,7 +12,16 @@ class AdminsController < ApplicationController
 			redirect_to root_url, :notice => "Welcome"
 		end
 	end
-
+	def index
+		caffeine=[]
+		hours_slept=[]
+		hours_worked=[]
+		day_ratings=[]
+		@admin = Admin.first
+		@stat = Stat.new()
+		@stats=Stat.all();
+		
+	end
 	private 
 
 	def admin_params

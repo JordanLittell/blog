@@ -1,0 +1,32 @@
+<div id="container">
+	<h1 class="gold">Welcome Jordan!</h1>
+
+	<div class="wrap">
+		<%=image_tag "cathedral.JPG",:id=> "profile-img"%>
+		<%= render :partial=> '/stats/form'%>
+	</div>
+
+	<div class="wrap" id ="graph">
+		<div id="stats-updates">
+			<%caffeine=[]%>
+			<%sleep=[]%>
+			<%work = []%>
+			<%day =[]%>
+			<%x_axis=[]%>
+			<%@stats.each do |stat|%>
+				<% caffeine << stat.mg_caffeine%>
+				<% sleep << stat.hours_slept%>
+				<% work << stat.hours_worked%>
+				<% day << stat.day_rating%>
+				<% x_axis << stat.created_at%>
+			<%end%>	
+			<%=caffeine%>
+			<%=work%>
+			<%=day%>
+			<%=sleep%>
+			<%=x_axis%>
+		</div>
+		
+	</div>
+
+</div>
