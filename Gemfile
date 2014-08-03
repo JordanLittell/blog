@@ -23,6 +23,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem "sprockets"
 gem "mini_magick"
 gem 'will_paginate', '~> 3.0.5'
+gem 'groupdate', '~> 2.1.1'
+gem 'active_median', '~> 0.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
@@ -34,8 +36,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'carrierwave'
 gem 'capybara'
-gem 'd3-rails'
+
 gem 'launchy'
+gem 'chartkick'
 gem 'bcrypt-ruby', :require=>"bcrypt"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

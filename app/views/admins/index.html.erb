@@ -1,5 +1,6 @@
+
 <div id="container">
-	<h1 class="gold">Welcome Jordan!</h1>
+	<h1 class="gold">About Me</h1>
 
 	<div class="wrap">
 		<%=image_tag "cathedral.JPG",:id=> "profile-img"%>
@@ -8,24 +9,25 @@
 
 	<div class="wrap" id ="graph">
 		<div id="stats-updates">
+<!-- Seriously need to move this logic elsewhere -->
 			<%caffeine=[]%>
 			<%sleep=[]%>
 			<%work = []%>
 			<%day =[]%>
 			<%x_axis=[]%>
 			<%@stats.each do |stat|%>
-				<% caffeine << stat.mg_caffeine%>
-				<% sleep << stat.hours_slept%>
-				<% work << stat.hours_worked%>
-				<% day << stat.day_rating%>
-				<% x_axis << stat.created_at%>
+				<% caffeine << [stat.created_at,stat.mg_caffeine]%>
+				<% sleep << [stat.created_at,stat.hours_slept]%>
+				<% work << [stat.created_at,stat.hours_worked]%>
+				<% day << [stat.created_at,stat.day_rating]%>
+
 			<%end%>	
-			<%=caffeine%>
-			<%=work%>
-			<%=day%>
-			<%=sleep%>
-			<%=x_axis%>
+			<h4 class="gold">Completely unecessary graph:</h4>
+			<%= line_chart caffeine, id:"chart", colors: ["#FFC125"],backgroundColor:"#FFF",height: "300px",width:"500px" %>
 		</div>
+
+		
+		
 		
 	</div>
 
