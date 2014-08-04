@@ -20,10 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem "sprockets"
+gem "sprockets", '~> 2.11.0'
 gem "mini_magick"
 gem 'groupdate', '~> 2.1.1'
-gem 'sprockets_better_errors'
 gem 'active_median', '~> 0.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
